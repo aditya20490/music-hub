@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Music Hub</h1>
+
+    <div class="tabs">
+      <button class="tab active" data-mode="lyrics">Search Lyrics</button>
+      <button class="tab" data-mode="cover">Search Album Cover</button>
+      <button class="tab" data-mode="music">Search Music</button>
+    </div>
+
+    <form id="form">
+      <select id="entity" hidden>
+        <option value="album">Album</option>
+        <option value="movie">Movie</option>
+        <option value="tvSeason">TV Show</option>
+        <option value="podcast">Podcast</option>
+        <option value="software">App</option>
+        <option value="ebook">iBook</option>
+        <option value="audiobook">Audiobook</option>
+      </select>
+      <input id="q" type="search" placeholder="Song or artist name…" autocomplete="off">
+      <button type="submit" class="go">Search</button>
+    </form>
+
+    <p id="status"></p>
+    <section id="lyrics" hidden></section>
+    <div id="results" class="grid"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
